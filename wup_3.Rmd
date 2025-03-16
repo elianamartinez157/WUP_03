@@ -47,6 +47,8 @@ The Back Seat likely has more outliers or extreme values that create a wider spr
 model1 <- aov(alcohol~Seat,data=davisdata)
 summary.aov(model1)
 ```
+the p-value of 0.000116 tells us that the probability of seeing a result as extreme as 9.656 (or more extreme) if there were truly no differences between seats is just 0.0116%.Since this is an extremely small probability, we have strong evidence to conclude that the "Seat" variable significantly affects the dependent variable, and the null hypothesis can be confidently rejected.
+
 There is a one in ten thousand chance of getting these outcomes. To ascertain which sets differ from one another, more investigation is necessary. 
 
 ## Conclusions
