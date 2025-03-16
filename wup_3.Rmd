@@ -37,8 +37,17 @@ basicCN + geom_boxplot(notch=TRUE,outlier.color = "red") + stat_boxplot(geom ='e
 ```
 
 ## Numerical Summarys 
+```{r}
+favstats(alcohol~Seat,data=ucdavis1)
+```
+The Back Seat likely has more outliers or extreme values that create a wider spread of data. The Front Seat seems to have a much smaller spread, with lower values overall. The Middle Seat represents an intermediate case between the other two, with moderate variability. 
 
 ## Inferential Tests
+```{r}
+model1 <- aov(alcohol~Seat,data=davisdata)
+summary.aov(model1)
+```
+There is a one in ten thousand chance of getting these outcomes. To ascertain which sets differ from one another, more investigation is necessary. 
 
 ## Conclusions
 
